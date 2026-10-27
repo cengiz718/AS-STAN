@@ -1,0 +1,8 @@
+{
+  "name": "Türkçe Asistanı",
+  "description": "Türkçe öğretmenleri için ders planı, MEB kazanımları, yazım ve dil bilgisi kılavuzu, soru bankası, kompozisyon değerlendirme ve kitap takip asistanı.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "ai-studio-android-trkeasis-90ba1f69-1ccc-4b2e-862e-ad73279db979",
+      "rules": "firestore.rules"
+    }
+  ]
+}

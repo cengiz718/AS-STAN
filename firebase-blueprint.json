@@ -1,0 +1,85 @@
+{
+  "entities": {
+    "TeacherNews": {
+      "title": "TeacherNews",
+      "description": "Öğretmenler ve MEB duyuruları, Türkçe dersi haberleri",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "summary": { "type": "string" },
+        "content": { "type": "string" },
+        "category": { "type": "string" },
+        "source": { "type": "string" },
+        "publishDate": { "type": "string" },
+        "isUrgent": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["id", "title", "content", "category"]
+    },
+    "MarketRate": {
+      "title": "MarketRate",
+      "description": "Dolar, Euro, Altın canlı kurları",
+      "type": "object",
+      "properties": {
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "buyingPrice": { "type": "number" },
+        "sellingPrice": { "type": "number" },
+        "changeRate": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["code", "name", "buyingPrice", "sellingPrice"]
+    },
+    "SharedDocument": {
+      "title": "SharedDocument",
+      "description": "Tüm Android cihazlarla senkronize edilen okul tutanak ve evrakları",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "authorId": { "type": "string" },
+        "title": { "type": "string" },
+        "type": { "type": "string" },
+        "schoolName": { "type": "string" },
+        "academicYear": { "type": "string" },
+        "content": { "type": "string" },
+        "htmlContent": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "authorId", "title", "content"]
+    },
+    "TurkcenResource": {
+      "title": "TurkcenResource",
+      "description": "turkcen.net'ten çekilen ve tüm cihazlarda güncellenen Türkçe materyalleri",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "grade": { "type": "string" },
+        "category": { "type": "string" },
+        "url": { "type": "string" },
+        "description": { "type": "string" },
+        "updatedAt": { "type": "string" }
+      },
+      "required": ["id", "title", "category"]
+    }
+  },
+  "firestore": {
+    "teacher_news": {
+      "entity": "TeacherNews",
+      "description": "Tüm cihazlara yayılan haberler koleksiyonu"
+    },
+    "market_rates": {
+      "entity": "MarketRate",
+      "description": "Dolar, Euro, Altın verileri koleksiyonu"
+    },
+    "shared_documents": {
+      "entity": "SharedDocument",
+      "description": "Kullanıcıların ve zümrelerin paylaştığı resmî tutanaklar"
+    },
+    "turkcen_resources": {
+      "entity": "TurkcenResource",
+      "description": "turkcen.net canlı kaynakları"
+    }
+  }
+}
